@@ -1,1 +1,3 @@
-typescript_lab
+# Laboratorio de Typescript
+
+Laboratorio general de Typescript
