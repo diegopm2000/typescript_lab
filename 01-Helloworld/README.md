@@ -16,7 +16,7 @@ $ npm i typescript -g
 $ tsc --version
 ```
 
-### 2. Transpile Typescript to Javascript
+### 3. Transpile Typescript to Javascript
 
 Build a javascript file from our typescript source.
 
@@ -24,7 +24,7 @@ Build a javascript file from our typescript source.
 $ tsc greeter.ts
 ```
 
-### 3. Execute the program
+### 4. Execute the program
 
 Open the greeter.html file using a browser
 

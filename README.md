@@ -1,3 +1,3 @@
-# Laboratorio de Typescript
+# Typescript Laboratory
 
-Laboratorio general de Typescript
+General purpose Typescript language labs
