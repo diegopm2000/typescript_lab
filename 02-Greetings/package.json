@@ -1,0 +1,15 @@
+{
+  "name": "02-greetings",
+  "version": "1.0.0",
+  "description": "Greetings in typescript and compiling to a specific runtime",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc greetings.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  }
+}
