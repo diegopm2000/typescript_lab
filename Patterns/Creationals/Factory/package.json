@@ -1,0 +1,20 @@
+{
+  "name": "creational-factory",
+  "version": "1.0.0",
+  "description": "Creational Pattern Factory in Typescript",
+  "scripts": {
+    "test": "mocha -r ts-node/register src/*.spec.ts"
+  },
+  "author": "Diego Perez Molinero",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "ts-node": "^10.4.0"
+  }
+}
