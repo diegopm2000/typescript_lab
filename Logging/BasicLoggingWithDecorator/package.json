@@ -1,7 +1,7 @@
 {
-  "name": "tictactoe",
+  "name": "loggerwithdecorator",
   "version": "1.0.0",
-  "description": "Tic Tac Toe in Typescript",
+  "description": "Loggerwithdecorator",
   "scripts": {
     "start": "ts-node index.ts",
     "lint": "eslint . --ext .ts",
