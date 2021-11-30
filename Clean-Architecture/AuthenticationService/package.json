@@ -1,0 +1,25 @@
+{
+  "name": "authentication-service-clean-arch",
+  "version": "0.1.0",
+  "description": "Authentication Service using Clean Architecture in Typescript",
+  "scripts": {
+    "start": "ts-node src/App/simpleApp.ts",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha -r ts-node/register *.spec.ts"
+  },
+  "author": "Diego Perez Molinero",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.4.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "^9.0.0",
+    "@types/uuid": "^8.3.3",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^8.2.0",
+    "mocha": "^9.1.3",
+    "ts-node": "^10.4.0"
+  }
+}
