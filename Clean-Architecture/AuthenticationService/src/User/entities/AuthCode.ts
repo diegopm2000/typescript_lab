@@ -4,8 +4,8 @@ import { Phone } from "./Phone";
 
 type Params = {
     id: Uuid,
-    email: string,
-    phone: Phone,
+    email?: string,
+    phone?: Phone,
     code: string,
     codeType: AuthCodeType
 }

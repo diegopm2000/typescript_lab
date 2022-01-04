@@ -17,6 +17,8 @@ export class SigningBySecretUCImpl implements SigningBySecretUC {
     }
 
     async execute(email: string, secret: string): Promise<AuthPayload> {
+        // TODO check las propiedades de entrada...no se si hacerlo aquí o en otra funcion previa
+        
         const userFound = await this._userRepository.getOne(new Filter({ email }))
         if (!userFound) {
             throw new Error(ErrorsUC.ERROR_USER_NOT_FOUND_BY_EMAIL)

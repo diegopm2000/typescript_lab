@@ -15,4 +15,8 @@ export class Phone {
     toString(): string {
         return this._countryCode + this._phoneNumber
     }
+
+    equals(phone: Phone) {
+        return this.toString() === phone.toString()
+    }
 }

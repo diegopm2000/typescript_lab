@@ -7,8 +7,8 @@ type Params = {
     id: Uuid,
     email: string,
     roles: Array<Role>,
-    secretData: SecretData,
-    customerData: CustomerData,
+    secretData?: SecretData,
+    customerData?: CustomerData,
 }
 
 export class User {

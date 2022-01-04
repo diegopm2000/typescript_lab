@@ -21,13 +21,14 @@ export class SigningBy2FImplUC implements SigningBy2FUC {
     }
  
     async execute(email: string, phone: Phone, authcodeEmail: string, authcodePhone: string): Promise<AuthPayload> {
+        // TODO check las propiedades de entrada...no se si hacerlo aquí o en otra funcion previa
+        
         const userFound = await this._userRepository.getOne(new Filter({ email }))
         if (!userFound) {
             throw new Error(ErrorsUC.ERROR_USER_NOT_FOUND_BY_EMAIL)
         }
 
-        // TODO - hacer una funcion comparadora de phones dentro de la propia clase de Phone
-        if (!userFound.customerData || userFound.customerData.phone.toString() !== phone.toString()) {
+        if (!userFound.customerData || userFound.customerData.phone.equals(phone)) {
             throw new Error(ErrorsUC.ERROR_USER_NOT_FOUND_BY_PHONE)
         }
 
