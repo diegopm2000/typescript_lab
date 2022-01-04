@@ -1,54 +1,46 @@
-import { Role } from "./Role"
-import { UserInterface } from "./User.interface"
+import { Uuid } from "../../Shared/entities/Uuid";
+import { SecretData } from "./SecretData";
+import { CustomerData } from "./CustomerData";
+import { Role } from "./Role";
 
 type Params = {
-  id: string
-  email: string,
-  roles: Array<Role>,
-  phone: string,
-  secret: string,
-  mnemonics: Array<string>
+    id: Uuid,
+    email: string,
+    roles: Array<Role>,
+    secretData: SecretData,
+    customerData: CustomerData,
 }
 
-export class User implements UserInterface {
+export class User {
+    private _id: Uuid
+    private _email: string
+    private _roles: Array<Role>
+    private _secretData?: SecretData
+    private _customerData?: CustomerData
 
-  private _id: string
-  private _email: string
-  private _roles: Array<Role>
-  private _phone?: string
-  private _secret?: string
-  private _mnemonics?: Array<string>
+    public get id(): Uuid {
+        return this._id
+    }
 
-  constructor({ id, email, roles, phone, secret, mnemonics }: Params) {
-    this._id = id
-    this._email = email
-    this._roles = roles
-    this._phone = phone
-    this._secret = secret
-    this._mnemonics = mnemonics
-  }
+    public get email(): string {
+        return this._email
+    }
 
-  public get id(): string {
-    return this._id
-  }
+    public get roles(): Array<Role> {
+        return this._roles
+    }
 
-  public get email(): string {
-      return this._email
-  }
+    public get customerData(): CustomerData | undefined {
+        return this._customerData
+    }
+     
+    constructor({ id, email, roles, secretData, customerData }: Params) {
+        this._id = id
+        this._email = email
+        this._roles = roles
+        this._secretData = secretData
+        this._customerData = customerData
+    }
 
-  public get roles(): Array<Role> {
-    return this._roles
-  }
-
-  public get phone(): string | undefined {
-      return this._phone
-  }
-
-  public get secret(): string | undefined {
-    return this._secret
-  }
-
-  public get mnemonics(): Array<string> | undefined {
-    return this._mnemonics
-  }
+    
 }

@@ -1,38 +1,35 @@
-import { AuthCodeInterface } from "./AuthCode.interface";
+import { Uuid } from "../../Shared/entities/Uuid";
+import { AuthCodeType } from "./AuthCodeType";
+import { Phone } from "./Phone";
 
 type Params = {
-  id: string,
-  userId: string,
-  emailCode: string,
-  phoneCode: string,
+    id: Uuid,
+    email: string,
+    phone: Phone,
+    code: string,
+    codeType: AuthCodeType
 }
 
-export class AuthCode implements AuthCodeInterface {
-  private _id: string
-  private _userId: string
-  private _emailCode: string
-  private _phoneCode: string
-  
-  constructor({ id, userId, emailCode, phoneCode }: Params) {
-    this._id = id
-    this._userId = userId
-    this._emailCode = emailCode
-    this._phoneCode = phoneCode
-  }
+export class AuthCode {
+    private _id: Uuid
+    private _email?: string
+    private _phone?: Phone
+    private _code: string
+    private _codeType: AuthCodeType
 
-  public get id(): string {
-    return this._id
-  }
+    public get id(): Uuid {
+        return this._id
+    }
 
-  public get userId(): string {
-    return this._userId
-  }
+    public get code(): string {
+        return this._code
+    }
 
-  public get emailCode(): string {
-    return this._emailCode
-  }
-
-  public get phoneCode(): string {
-    return this._phoneCode
-  }
+    constructor({ id, email, phone, code, codeType }: Params) {
+        this._id = id
+        this._email = email
+        this._phone = phone
+        this._code = code
+        this._codeType = codeType
+    }
 }
