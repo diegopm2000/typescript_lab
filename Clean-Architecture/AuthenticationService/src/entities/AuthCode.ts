@@ -1,4 +1,4 @@
-import { Uuid } from "../../Shared/entities/Uuid";
+import { Uuid } from "./Uuid";
 import { AuthCodeType } from "./AuthCodeType";
 import { Phone } from "./Phone";
 

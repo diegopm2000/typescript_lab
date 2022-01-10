@@ -1,5 +1,5 @@
-import { Uuid } from "../../../../Shared/entities/Uuid"
 import { AuthCode } from "../../../entities/AuthCode"
+import { Uuid } from "../../../entities/Uuid"
 import { Filter } from "./Filter"
 
 export interface AuthCodeRepository {

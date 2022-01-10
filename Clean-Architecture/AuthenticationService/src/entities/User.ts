@@ -1,4 +1,4 @@
-import { Uuid } from "../../Shared/entities/Uuid";
+import { Uuid } from "./Uuid";
 import { SecretData } from "./SecretData";
 import { CustomerData } from "./CustomerData";
 import { Role } from "./Role";

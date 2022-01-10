@@ -1,7 +1,7 @@
-import { Uuid } from "../../../Shared/entities/Uuid";
 import { AuthCode } from "../../entities/AuthCode";
 import { AuthCodeType } from "../../entities/AuthCodeType";
 import { Phone } from "../../entities/Phone";
+import { Uuid } from "../../entities/Uuid";
 import { SendAuthCodeUC } from "../ports/input/SendAuthCodeUC";
 import { AuthCodeRepository } from "../ports/output/AuthCodeRepository";
 import { Filter } from "../ports/output/Filter";

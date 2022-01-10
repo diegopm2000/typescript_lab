@@ -1,5 +1,5 @@
-import { Uuid } from "../../../Shared/entities/Uuid";
 import { Role } from "../../entities/Role";
+import { Uuid } from "../../entities/Uuid";
 
 export class AuthPayload {
 
